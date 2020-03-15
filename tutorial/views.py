@@ -8,4 +8,4 @@ from django.conf.urls import url, include
 def home(request):
     if request.method == 'POST':
         return Response({"message": "Got some data!", "data": request.data})
-    return Response({"auth_token": request.headers['Authorization']})
+    return Response({"jwt_token": request.headers['Authorization']})
